@@ -1,9 +1,9 @@
-require 'rspec'
+require 'rails_helper'
 
-describe 'My behaviour' do
+describe 'home page' do
 
-  it 'should do something' do
-
-    true.should == false
+  it 'should display something' do
+    visit root_path
+    expect(page).to have_content("We are online!")
   end
 end
