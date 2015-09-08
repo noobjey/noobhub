@@ -29,6 +29,7 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'simplecov'
+  gem 'guard-rspec'
 
   gem 'web-console', '~> 2.0'
 end
