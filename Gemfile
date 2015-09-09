@@ -25,7 +25,7 @@ gem 'figaro'
 # gem 'bcrypt', '~> 3.1.7'
 
 # heroku deployment gem
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'rspec-rails'
