@@ -1,0 +1,52 @@
+{
+  "provider": "github",
+  "uid": "3605799",
+  "info": {
+    "nickname": "sudbutt",
+    "email": null,
+    "name": "sudbutt",
+    "image": "https://avatars.githubusercontent.com/u/3605799?v=3",
+    "urls": {
+      "GitHub": "https://github.com/sudbutt",
+      "Blog": null
+    }
+  },
+  "credentials": {
+    "token": "4555052c94cca10a6381e42acaf03a0a0ca1a85d",
+    "expires": false
+  },
+  "extra": {
+    "raw_info": {
+      "login": "sudbutt",
+      "id": 3605799,
+      "avatar_url": "https://avatars.githubusercontent.com/u/3605799?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/sudbutt",
+      "html_url": "https://github.com/sudbutt",
+      "followers_url": "https://api.github.com/users/sudbutt/followers",
+      "following_url": "https://api.github.com/users/sudbutt/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sudbutt/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sudbutt/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sudbutt/subscriptions",
+      "organizations_url": "https://api.github.com/users/sudbutt/orgs",
+      "repos_url": "https://api.github.com/users/sudbutt/repos",
+      "events_url": "https://api.github.com/users/sudbutt/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sudbutt/received_events",
+      "type": "User",
+      "site_admin": false,
+      "name": "sudbutt",
+      "company": null,
+      "blog": null,
+      "location": null,
+      "email": null,
+      "hireable": null,
+      "bio": null,
+      "public_repos": 2,
+      "public_gists": 1,
+      "followers": 0,
+      "following": 0,
+      "created_at": "2013-02-15T20:26:27Z",
+      "updated_at": "2015-09-09T13:59:36Z"
+    }
+  }
+}
