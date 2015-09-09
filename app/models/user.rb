@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
     user.username = data.info.nickname
     user.image_url = data.info.image
 
+    user.save
     user
   end
 end
