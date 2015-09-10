@@ -1,1 +1,11 @@
-<%= button_to "Login with Github", "/auth/github" %>
+<section class="my-box full-page-width">
+  <header>
+    <h1>Welcome to noobHub!</h1>
+    <div>
+      <%= button_to "Login with Github", "/auth/github", class: "btn btn-success" %>
+    </div>
+  </header>
+  <footer>
+    <%= link_to "Create a GitHub account.", "https://github.com/" %>
+  </footer>
+</section>

@@ -1,6 +1,57 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$box-background: white
+$box-border-radius: 20px
+$box-full-page: 90%
+$box-full-max-width: 1000px
+$border-color: #bce3b5
+
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+@mixin center-children
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin border-base
+  border: 1px solid $border-color
+
+@mixin the-box
+  padding: 15px 20px
+  margin: 20px 0
+  background-color: $box-background
+  border-radius: $box-border-radius
+  @include border-base
 
 body
-  background-color: aquamarine
+  background: url(image-path('code-background.jpg')) no-repeat center center
+  @include center-children
+
+.my-box
+  @include the-box
+
+.full-page-width
+  width: $box-full-page
+  max-width: $box-full-max-width
+
+section
+  header
+    height: 90px
+    @include clearfix
+
+    & > h1, & > div
+      height: 50px
+      margin-top: 10px
+
+    h1
+      float: left
+    div
+      float: right
+
+  footer
+    width: 100%
+    padding-top: 10px
+    border-top: 1px $border-color solid
+    text-align: right
