@@ -8,19 +8,29 @@ class GithubService
   end
 
   def user_info
-    @user_info ||= JSON.parse(connection.get("users/#{user.username}").body)
+    @user_info ||= parse_response(connection.get("users/#{user.username}"))
   end
 
   def starred_repository_info
-    @starred_repository_info ||= JSON.parse(connection.get("/users/#{user.username}/starred").body)
+    @starred_repository_info ||= parse_response(call_api("starred"))
   end
 
   def followers
-    @followers ||= JSON.parse(connection.get("/users/#{user.username}/followers").body)
+    @followers ||= parse_response(call_api("followers"))
   end
 
   def following
-    @following ||= JSON.parse(connection.get("/users/#{user.username}/following").body)
+    @following ||= parse_response(call_api("following"))
+  end
+
+  private
+
+  def call_api(path)
+    connection.get("/users/#{user.username}/#{path}")
+  end
+
+  def parse_response(response)
+    JSON.parse(response.body)
   end
 
 end
