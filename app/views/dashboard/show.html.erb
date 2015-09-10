@@ -24,6 +24,13 @@
 <h3>Repositories</h3>
 <ul>
   <% @big_hairy.repositories.each do |repo| %>
-  <li><%= repo %></li>
+    <li><%= repo %></li>
+  <% end %>
+</ul>
+
+<h3>Organizations</h3>
+<ul>
+  <% @big_hairy.organizations.each do |org| %>
+    <li><%= org %></li>
   <% end %>
 </ul>

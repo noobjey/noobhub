@@ -34,4 +34,10 @@ class BigHairy
       repo['name']
     end
   end
+
+  def organizations
+    github_service.organizations.map do |org|
+      org
+    end
+  end
 end

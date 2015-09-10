@@ -27,6 +27,10 @@ class GithubService
     @repositories ||= parse_response(call_api("repos"))
   end
 
+  def organizations
+    @organizations ||= parse_response(call_api("orgs"))
+  end
+
   private
 
   def call_api(path)
