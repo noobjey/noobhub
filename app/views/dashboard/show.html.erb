@@ -1,9 +1,22 @@
-<h1><%= current_user.name %>'s Dashboard</h1>
+<h1><%= @big_hairy.name %>'s Dashboard</h1>
 
-<%= image_tag(current_user.image_url) %>
+<%= image_tag @big_hairy.profile_pic %>
 
 <div>
-  <ul>
-    <li>Username: <%= current_user.username %></li>
-  </ul>
+  Number of starred repos: <%= @big_hairy.starred_repos %>
 </div>
+
+
+<h3>Followers</h3>
+<ul>
+  <% @big_hairy.followers.each do |follower| %>
+    <li><%= follower %></li>
+  <% end %>
+</ul>
+
+<h3>Following</h3>
+<ul>
+  <% @big_hairy.following.each do |user| %>
+    <li><%= user %></li>
+  <% end %>
+</ul>
