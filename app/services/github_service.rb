@@ -23,6 +23,10 @@ class GithubService
     @following ||= parse_response(call_api("following"))
   end
 
+  def repositories
+    @repositories ||= parse_response(call_api("repos"))
+  end
+
   private
 
   def call_api(path)
