@@ -31,6 +31,10 @@ class GithubService
     @organizations ||= parse_response(call_api("orgs"))
   end
 
+  def activities
+    @activity ||= parse_response(call_api("events"))
+  end
+
   private
 
   def call_api(path)

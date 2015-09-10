@@ -40,4 +40,10 @@ class BigHairy
       org
     end
   end
+
+  def activities
+    github_service.activities.map do |activity|
+      activity['type']
+    end
+  end
 end
