@@ -1,8 +1,13 @@
-$box-background: white
+$light-color: #FFFFFF
+$dark-color: #515151
+$bright-color: #00B4FF
+
+$box-background: $light-color
+$border-color: $dark-color
+
 $box-border-radius: 20px
 $box-full-page: 90%
 $box-full-max-width: 1000px
-$border-color: #bce3b5
 
 @mixin clearfix
   &:after
@@ -26,6 +31,8 @@ $border-color: #bce3b5
   @include border-base
 
 body
+  font-family: 'Questrial', "Helvetica Neue", Arial, Helvetica, sans-serif
+  color: $dark-color
   background: url(image-path('code-background.jpg')) no-repeat center center
   @include center-children
 
@@ -35,6 +42,9 @@ body
 .full-page-width
   width: $box-full-page
   max-width: $box-full-max-width
+
+.btn
+  background-color: $bright-color
 
 section
   header
