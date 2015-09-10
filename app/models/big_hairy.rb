@@ -28,4 +28,10 @@ class BigHairy
       user['login']
     end
   end
+
+  def repositories
+    github_service.repositories.map do |repo|
+      repo['name']
+    end
+  end
 end
