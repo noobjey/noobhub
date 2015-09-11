@@ -20,6 +20,12 @@ $box-full-max-width: 1000px
   justify-content: center
   align-items: center
 
+@mixin distribute-children($justify)
+  display: flex
+  justify-content: $justify
+  align-items: center
+
+
 @mixin border-base
   border: 1px solid $border-color
 
@@ -46,37 +52,45 @@ body
 .btn
   background-color: $bright-color
 
-section.welcome
-  header
-    height: 90px
-    @include clearfix
+section
+  &.welcome
+    header
+      height: 90px
 
-    & > h1, & > div
-      height: 50px
-      margin-top: 10px
+      & > h1, & > div
+        height: 50px
+        margin-top: 10px
 
-    h1
-      float: left
-    div
+      h1
+        float: left
+      div
+        float: right
+
+  &.dashboard
+    font-size: 1.5em
+
+    p
       float: right
+      width: 85%
+
+    img
+      float: left
+      height: 100px
+      border-radius: $box-border-radius
+      @include border-base
+
+  header
+    @include clearfix
 
   footer
     width: 100%
     padding-top: 10px
     border-top: 1px $border-color solid
     text-align: right
+    margin-top: 10px
+    @include center-children
 
-
-section.dashboard
-  font-size: 1.5em
-
-  p
-    float: right
-    width: 85%
-
-  img
-    float: left
-    height: 100px
-    border-radius: $box-border-radius
-    @include border-base
-
+    span
+      float: left
+      font-size: .75em
+      width: 15%

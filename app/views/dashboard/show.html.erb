@@ -1,8 +1,14 @@
 <section class="my-box full-page-width dashboard">
   <header>
     <%= image_tag @big_hairy.profile_pic %>
-    <p>I'm <%= @big_hairy.github_username %> (legally <%= @big_hairy.name %>) and I am currently at <%= @big_hairy.job %> in <%= @big_hairy.location %>. I have <%= @big_hairy.contributions %> contributions this year, my longest commit streak was <%= @big_hairy.longest_streak %> days, and my current streak is <%= @big_hairy.current_streak %> days.</p>
+    <p>I'm <%= @big_hairy.github_username %> (legally <%= @big_hairy.name %>) and I am currently
+      at <%= @big_hairy.job %> in <%= @big_hairy.location %>. I have <%= @big_hairy.contributions %> contributions this
+      year, my longest commit streak was <%= @big_hairy.longest_streak %> days, and my current streak
+      is <%= @big_hairy.current_streak %> days.</p>
   </header>
   <footer>
+    <span><%= @big_hairy.starred_repos %> Starred Repos</span>
+    <span><%= @big_hairy.followers.count %> Followers</span>
+    <span><%= @big_hairy.following.count %> Following</span>
   </footer>
 </section>
