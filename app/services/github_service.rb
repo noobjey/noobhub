@@ -11,6 +11,18 @@ class GithubService
     @user_info ||= parse_response(connection.get("users/#{user.username}"))
   end
 
+  def contributions
+    "216"
+  end
+
+  def longest_streak
+    "16"
+  end
+
+  def current_streak
+    "6"
+  end
+
   def starred_repository_info
     @starred_repository_info ||= parse_response(call_api("starred"))
   end
