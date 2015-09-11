@@ -9,8 +9,34 @@ class BigHairy
     github_service.user_info['name']
   end
 
+  def github_username
+    github_service.user_info['login']
+  end
+
   def profile_pic
     github_service.user_info['avatar_url']
+  end
+
+  def job
+    github_service.user_info['company']
+  end
+
+  def location
+    github_service.user_info['location']
+  end
+
+
+
+  def contributions
+    github_service.contributions
+  end
+
+  def longest_streak
+    github_service.longest_streak
+  end
+
+  def current_streak
+    github_service.current_streak
   end
 
   def starred_repos
