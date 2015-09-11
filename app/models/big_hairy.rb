@@ -55,9 +55,15 @@ class BigHairy
     end
   end
 
+
+
   def repositories
     github_service.repositories.map do |repo|
-      repo['name']
+      data = {}
+      data['name'] = repo['name']
+      data['description'] = repo['description']
+      data['url'] = repo['html_url']
+      data
     end
   end
 
