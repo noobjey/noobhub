@@ -8,6 +8,10 @@ $border-color: $dark-color
 $box-border-radius: 20px
 $box-full-page: 90%
 $box-full-max-width: 1000px
+$box-full-min-width: 600px
+$box-third-page: 30%
+$box-third-max-width: 330px
+$box-third-min-width: 230px
 
 @mixin clearfix
   &:after
@@ -20,27 +24,24 @@ $box-full-max-width: 1000px
   justify-content: center
   align-items: center
 
-@mixin distribute-children($justify)
-  display: flex
-  justify-content: $justify
-  align-items: center
-
-
 @mixin border-base
   border: 1px solid $border-color
 
 @mixin the-box
   padding: 15px 20px
-  margin: 20px 0
+  margin: 10px
   background-color: $box-background
   border-radius: $box-border-radius
   @include border-base
 
+@mixin seperate_content
+  border-top: 1px $border-color solid
+  padding-top: 10px
+
 body
   font-family: 'Questrial', "Helvetica Neue", Arial, Helvetica, sans-serif
   color: $dark-color
-  background: url(image-path('code-background.jpg')) no-repeat center center
-  @include center-children
+  background: url(image-path('code-background.jpg')) repeat center center
 
 .my-box
   @include the-box
@@ -48,18 +49,31 @@ body
 .full-page-width
   width: $box-full-page
   max-width: $box-full-max-width
+  min-width: $box-full-min-width
+
+.third-page-width
+  width: $box-third-page
+  max-width: $box-third-max-width
+  min-width: $box-third-min-width
+
+.small-box
+  float: left
 
 .btn
   background-color: $bright-color
 
+.my-container
+  @include center-children
+
 section
+  margin: 20px auto
+
   &.welcome
     header
-      height: 90px
 
       & > h1, & > div
-        height: 50px
         margin-top: 10px
+        height: 50px
 
       h1
         float: left
@@ -67,9 +81,17 @@ section
         float: right
 
   &.dashboard
-    font-size: 1.5em
+    h1, h2, h3, h4
+      margin: 10px
+      text-align: center
 
+    .my-content
+      @include seperate_content
+      @include clearfix
+
+  &.intro
     p
+      font-size: 1.5em
       float: right
       width: 85%
 
@@ -79,18 +101,14 @@ section
       border-radius: $box-border-radius
       @include border-base
 
-  header
-    @include clearfix
-
   footer
     width: 100%
-    padding-top: 10px
-    border-top: 1px $border-color solid
+    @include seperate_content
     text-align: right
     margin-top: 10px
     @include center-children
 
     span
       float: left
-      font-size: .75em
+      font-size: 1.2em
       width: 15%
